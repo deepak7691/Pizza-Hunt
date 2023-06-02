@@ -1,10 +1,16 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './OrderDetails.css';
 
 function OrderDetails() {
   const location = useLocation();
   const { name, orderId, address, message, pizza, quantity, total } = location.state;
+
+  const navigate = useNavigate()
+
+  const navigateHome = () => {
+    navigate("/")
+  }
 
   return (
     <div className="order-details">
@@ -35,6 +41,9 @@ function OrderDetails() {
 
       <button className="print-button" onClick={() => window.print()}>
         Print Receipt 
+      </button>
+      <button className="print-button btnHome" onClick={navigateHome}>
+        Home
       </button>
     </div>
   );
