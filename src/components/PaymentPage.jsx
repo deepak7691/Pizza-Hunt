@@ -15,18 +15,13 @@ function PaymentPage() {
 
   const handlePayment = (e) => {
     e.preventDefault();
-  
-    // Perform payment processing or API call here
-    // You can use the form inputs: cardNumber, expiryDate, cvv, name, address
-  
-    // Simulating loading state for demonstration purposes
-    setIsLoading(true);
+
+    setIsLoading(true); // Set loading state to true
     setTimeout(() => {
-      setIsLoading(false);
-  
+
       // Generate a random order ID (5 digits)
       const orderId = Math.floor(10000 + Math.random() * 90000);
-  
+
       // Redirect to the order confirmation page with the order details
       navigate(`/order/${orderId}`, {
         state: {
@@ -39,74 +34,79 @@ function PaymentPage() {
           total: location.state.total,
         },
       });
-    }, 2000);
-  
-    // Reset the form after payment is completed
-    setCardNumber('');
-    setExpiryDate('');
-    setCvv('');
-    setName('');
-    setAddress('');
+
+      // Reset the form after payment is completed
+      setCardNumber('');
+      setExpiryDate('');
+      setCvv('');
+      setName('');
+      setAddress('');
+    }, 4000);
   };
-  
 
   return (
     <div className="payment-form">
       <h1>Payment Details</h1>
-      <form onSubmit={handlePayment}>
-        <div>
-          <label htmlFor="cardNumber">Card Number:</label>
-          <input
-            type="text"
-            id="cardNumber"
-            value={cardNumber}
-            onChange={(e) => setCardNumber(e.target.value)}
-            required
-          />
+      {isLoading ? (
+        <div className="loading-container">
+          <img src="https://cdn.pixabay.com/animation/2023/02/02/16/42/16-42-28-220_512.gif" alt="Loading..." className="loader" />
         </div>
-        <div>
-          <label htmlFor="expiryDate">Expiry Date:</label>
-          <input
-            type="text"
-            id="expiryDate"
-            value={expiryDate}
-            onChange={(e) => setExpiryDate(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="cvv">CVV:</label>
-          <input
-            type="text"
-            id="cvv"
-            value={cvv}
-            onChange={(e) => setCvv(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="name">Name on Card:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="address">Delivery Address:</label>
-          <textarea
-            id="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" disabled={isLoading} className="payment-button">
-          {isLoading ? 'Processing...' : 'Make Payment'}
-        </button>
-      </form>
+      ) : (
+        <form onSubmit={handlePayment}>
+          <div>
+            <label htmlFor="cardNumber">Card Number:</label>
+            <input
+              type="text"
+              id="cardNumber"
+              value={cardNumber}
+              onChange={(e) => setCardNumber(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="expiryDate">Expiry Date:</label>
+            <input
+              type="text"
+              id="expiryDate"
+              value={expiryDate}
+              onChange={(e) => setExpiryDate(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="cvv">CVV:</label>
+            <input
+              type="text"
+              id="cvv"
+              value={cvv}
+              onChange={(e) => setCvv(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="name">Name on Card:</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="address">Delivery Address:</label>
+            <textarea
+              id="address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="payment-button">
+            Make Payment
+          </button>
+        </form>
+      )}
     </div>
   );
 }

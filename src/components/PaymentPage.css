@@ -29,15 +29,29 @@
   .payment-form button {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
+    background-color: black;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
+
+  
   
   .payment-form button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+  }
+
+  .loading-container{
+    
+    width: 50%;
+    margin: auto;
+
+  }
+
+  .loading-container img{
+    width: 100%;
+
   }
   
