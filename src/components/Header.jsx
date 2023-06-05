@@ -9,7 +9,7 @@ const Header = (props) => {
         <ul className="header__menu">
           <li className="header__menu-item">
             <input
-              type='text' placeholder='Seacrh for your favourite Pizza '
+              type='text' placeholder='Your favourite Pizza '
               value={props.searchText}
               onChange={(e) => props.setSearchText(e.target.value)}
             />

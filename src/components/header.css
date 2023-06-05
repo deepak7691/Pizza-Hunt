@@ -39,10 +39,14 @@
 }
 
 input{
-  width: 250px;
-  margin-right: 400px;
-  padding: 10px 10px;
+  width: 150px;
+  padding: 7px;
+  border: none;
+  outline: none;
+  
+  
 }
+
 .header__search-input {
   border: none;
   outline: none;
