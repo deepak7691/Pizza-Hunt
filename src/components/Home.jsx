@@ -41,7 +41,7 @@ function Home() {
               <img src={item.src} alt="pizza" className="card-img" />
               <h1>{item.name}</h1>
               <p>{item.description}</p>
-              <h4>{item.price}</h4>
+              <h4>₹ {item.price}</h4>
             </div>
           ))}
       </div>
