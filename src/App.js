@@ -4,6 +4,7 @@ import Home from './components/Home'
 import OrderPage from './components/OrderPage'
 import PaymentPage from './components/PaymentPage'
 import OrderDetails from './components/OrderDetails'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/order/:id" element={<OrderDetails />} />
 
       </Routes>
+      <Footer/>
 
     </BrowserRouter>
   )

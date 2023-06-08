@@ -50,9 +50,10 @@
 }
 
 @media (max-width: 768px) {
+ 
   .header {
-    flex-direction: column;
-    padding: 10px;
+   width: 100%;
+    
   }
 
   .header__title {
@@ -61,7 +62,7 @@
   }
 
   .header__nav {
-    margin: 0;
+    margin: 5px;
   }
 
   .header__menu {
@@ -71,4 +72,16 @@
   .header__menu-item {
     margin: 0 10px;
   }
+  .header__title {
+    color: #fff;
+    font-size: 16px;
+  }
+  .header__search-input {
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 3px;
+    font-size: 5px;
+  }
+  
 }
