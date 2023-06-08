@@ -15,6 +15,9 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  transition-property: background-color;
+    transition-duration: .7s;
+    transition-timing-function: ease;
 }
 
 .card:hover {
@@ -79,8 +82,11 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition-property: background-color;
+    transition-duration: .7s;
+    transition-timing-function: ease;
 }
 
 .proceed-btn:hover {
-  background-color: #f44336;
+  background-color: green;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { useNavigate } from 'react-router-dom';
 import { pizzas } from '../data';
@@ -8,7 +8,25 @@ function Home() {
   const [selectedPizza, setSelectedPizza] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [filteredPizza, setFilteredPizza] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const filterPizza = () => {
+      const filteredItems = pizzas.filter((item) =>
+        item.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+      setFilteredPizza(filteredItems);
+    };
+
+    const delayDebounce = setTimeout(() => {
+      filterPizza();
+    }, 300);
+
+    return () => {
+      clearTimeout(delayDebounce);
+    };
+  }, [searchText]);
 
   const handleCardClick = (pizza) => {
     setSelectedPizza(pizza);
@@ -28,22 +46,18 @@ function Home() {
     <>
       <Header searchText={searchText} setSearchText={setSearchText} />
       <div className="flexbox">
-        {pizzas
-          .filter((item) =>
-            item.name.toLowerCase().includes(searchText.toLowerCase())
-          )
-          .map((item) => (
-            <div
-              className="card"
-              key={item.id}
-              onClick={() => handleCardClick(item)}
-            >
-              <img src={item.src} alt="pizza" className="card-img" />
-              <h1>{item.name}</h1>
-              <p>{item.description}</p>
-              <h4>₹ {item.price}</h4>
-            </div>
-          ))}
+        {filteredPizza.map((item) => (
+          <div
+            className="card"
+            key={item.id}
+            onClick={() => handleCardClick(item)}
+          >
+            <img src={item.src} alt="pizza" className="card-img" />
+            <h1>{item.name}</h1>
+            <p>{item.description}</p>
+            <h4>₹ {item.price}</h4>
+          </div>
+        ))}
       </div>
 
       {/* Modal */}

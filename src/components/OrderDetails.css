@@ -21,15 +21,18 @@
   .order-details .print-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #008000;
+    background-color: black;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .7s;
+    transition-timing-function: ease;
   }
   
   .order-details .print-button:hover {
-    background-color: #006400;
+    background-color: green;
   }
   
 
