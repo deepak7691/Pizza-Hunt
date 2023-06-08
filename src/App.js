@@ -5,6 +5,7 @@ import OrderPage from './components/OrderPage'
 import PaymentPage from './components/PaymentPage'
 import OrderDetails from './components/OrderDetails'
 import Footer from './components/Footer'
+import ContactUs from './components/ContactUs'
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/order" element={<OrderPage />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/order/:id" element={<OrderDetails />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        
 
       </Routes>
       <Footer/>
