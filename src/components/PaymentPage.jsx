@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './PaymentPage.css';
 
-function PaymentPage() {
+const PaymentPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { cartItems, totalAmount } = location.state;
 
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
@@ -16,26 +16,21 @@ function PaymentPage() {
   const handlePayment = (e) => {
     e.preventDefault();
 
-    setIsLoading(true); // Set loading state to true
+    setIsLoading(true);
     setTimeout(() => {
-
-      // Generate a random order ID (5 digits)
       const orderId = Math.floor(10000 + Math.random() * 90000);
 
-      // Redirect to the order confirmation page with the order details
       navigate(`/order/${orderId}`, {
         state: {
           name,
           orderId,
           address,
           message: 'Your order should be delivered shortly.',
-          pizza: location.state.pizza,
-          quantity: location.state.quantity,
-          total: location.state.total,
+          cartItems,
+          totalAmount
         },
       });
 
-      // Reset the form after payment is completed
       setCardNumber('');
       setExpiryDate('');
       setCvv('');
@@ -49,7 +44,11 @@ function PaymentPage() {
       <h1>Payment Details</h1>
       {isLoading ? (
         <div className="loading-container">
-          <img src="https://cdn.pixabay.com/animation/2023/02/02/16/42/16-42-28-220_512.gif" alt="Loading..." className="loader" />
+          <img
+            src="https://cdn.pixabay.com/animation/2023/02/02/16/42/16-42-28-220_512.gif"
+            alt="Loading..."
+            className="loader"
+          />
         </div>
       ) : (
         <form onSubmit={handlePayment}>
@@ -109,6 +108,6 @@ function PaymentPage() {
       )}
     </div>
   );
-}
+};
 
 export default PaymentPage;

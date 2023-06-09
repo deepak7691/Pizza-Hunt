@@ -3,6 +3,7 @@ import './header.css';
 import { useNavigate } from 'react-router-dom';
 
 const Header = (props) => {
+  const {cartItems} = props;
   const navigate = useNavigate();
   const navigateContact = () =>{
     navigate("/contact-us")
@@ -12,6 +13,12 @@ const Header = (props) => {
     const footer = document.getElementById('footer');
     footer.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const navigateCart = () =>{
+    navigate("/cart", {state : {cartItems : cartItems}})
+  }
+
+  
 
   return (
     <header className="header">
@@ -25,6 +32,8 @@ const Header = (props) => {
             About
           </li>
           <li className="header__menu-item" onClick={navigateContact}>Contact</li>
+          <li className="header__menu-item" onClick={navigateCart}>Cart</li>
+
         </ul>
       </nav>
     </header>

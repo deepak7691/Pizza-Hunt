@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import { useNavigate } from 'react-router-dom';
+
 import { pizzas } from '../data';
 import Header from './Header';
+
 
 function Home() {
   const [selectedPizza, setSelectedPizza] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
   const [filteredPizza, setFilteredPizza] = useState([]);
-  const navigate = useNavigate();
+  const [cartItems, setCartItems] = useState([]);
+
 
   useEffect(() => {
     const filterPizza = () => {
@@ -38,13 +40,16 @@ function Home() {
     setShowModal(false);
   };
 
-  const handleOrder = () => {
-    navigate('/order', { state: { pizza: selectedPizza } });
+
+  const handleAddToCart = () => {
+    setCartItems((prevItems) => [...prevItems, selectedPizza]);
+    handleCloseModal();
   };
+
 
   return (
     <>
-      <Header searchText={searchText} setSearchText={setSearchText} />
+      <Header searchText={searchText} setSearchText={setSearchText} cartItems={cartItems} />
       <div className="flexbox">
         {filteredPizza.map((item) => (
           <div
@@ -70,13 +75,16 @@ function Home() {
             <img src={selectedPizza.src} alt="pizza" className="modal-img" />
             <h1>{selectedPizza.name}</h1>
             <p>{selectedPizza.description}</p>
-            <h4>{selectedPizza.price}</h4>
-            <button className="proceed-btn" onClick={handleOrder}>
-              Order Now
+            <h4>₹ {selectedPizza.price}</h4>
+            <button className="add-to-cart-btn" onClick={handleAddToCart}>
+              Add to Cart
             </button>
           </div>
         </div>
       )}
+
+
+
     </>
   );
 }
