@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate, } from 'react-router-dom';
+import "../styles/OrderDetails.css"
 
 const OrderDetails = () => {
   const location = useLocation();
