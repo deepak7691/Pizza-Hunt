@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   list-style: none;
-  margin-right: 100px;
+  margin-right: 20px;
   padding: 0;
 }
 
@@ -30,7 +30,7 @@
   color: #fff;
   font-size: 24px;
   font-weight: 500;
-  margin: 0 50px;
+  margin: 0 30px;
   cursor: pointer;
   transition: .5s;
 }
@@ -68,12 +68,12 @@ input {
   }
 
   .header__menu-item {
-    margin: 0 20px;
+    margin: 0 15px;
     font-size: 20px;
   }
 
   input {
-    width: 150px;
+    width: 200px;
   }
 
   .cart-icon {
