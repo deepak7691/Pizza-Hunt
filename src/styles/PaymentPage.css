@@ -1,75 +1,64 @@
+/* payment-page.css */
+
 .payment-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.payment-form h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.payment-form input,
+.payment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.payment-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment-form button:hover {
+  background-color: #0056b3;
+}
+
+.loading-container {
+  text-align: center;
+  margin-bottom: 20px;
   
-  .payment-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+}
+
+.loader {
+  width: 40%;
+  height: 40%;
   
-  .payment-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .payment-form label {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .payment-form input,
-  .payment-form textarea {
+}
+
+@media (max-width: 600px) {
+  .payment-form {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
-  
-  .payment-form button.payment-button {
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-  }
-  
- 
-  .loader {
-    width: 60%;
-    
-  }
-  
-  @media screen and (max-width: 768px) {
-    .payment-form {
-      max-width: 100%;
-      padding: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .payment-form input,
-    .payment-form textarea {
-      font-size: 14px;
-    }
-  
-    .payment-form button.payment-button {
-      font-size: 14px;
-    }
-  }
-  
+}

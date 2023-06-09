@@ -17,18 +17,18 @@ const OrderDetails = () => {
 
   return (
     <div className="order-details">
-      <h2>Order Details</h2>
+      <h1>Congratulations </h1>
+      <h5>
+        {message}
+      </h5>
       <p>
-        <strong>Name:</strong> {name}
+        <strong>Name: </strong> {name}
       </p>
       <p>
         <strong>Order ID:</strong> {orderId}
       </p>
       <p>
         <strong>Delivery Address:</strong> {address}
-      </p>
-      <p>
-        <strong>Message:</strong> {message}
       </p>
       <h3>Items:</h3>
       <ul>

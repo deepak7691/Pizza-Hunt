@@ -37,7 +37,7 @@ const PaymentPage = () => {
       setCvv('');
       setName('');
       setAddress('');
-    }, 4000);
+    }, 2500);
   };
 
   return (
@@ -46,7 +46,7 @@ const PaymentPage = () => {
       {isLoading ? (
         <div className="loading-container">
           <img
-            src="https://cdn.pixabay.com/animation/2023/02/02/16/42/16-42-28-220_512.gif"
+            src="https://media.giphy.com/media/3o7bu8sRnYpTOG1p8k/giphy.gif"
             alt="Loading..."
             className="loader"
           />

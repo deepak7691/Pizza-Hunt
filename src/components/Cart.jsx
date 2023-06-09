@@ -34,7 +34,7 @@ const Cart = () => {
       total += item.price * item.quantity;
     });
 
-    return total;
+    return Math.ceil(total);
   };
 
   const navigateToPayment = () => {
@@ -48,7 +48,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h1>Your Pizzas <FaShoppingCart/></h1>
+      <h1>Your Pizzas    <FaShoppingCart/></h1>
       {cartItems.length === 0 ? (
         <p>No items in the cart</p>
       ) : (
@@ -79,7 +79,7 @@ const Cart = () => {
               </li>
             ))}
           </ul>
-          <p className="grand-total">Grand Total: ₹ {calculateTotal()}</p>
+        <h3>  <p className="grand-total">Grand Total: ₹ {calculateTotal()}</p></h3>
           <button className="proceed-btn" onClick={navigateToPayment}>
             Proceed to Payment
           </button>
