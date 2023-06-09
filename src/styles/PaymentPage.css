@@ -4,12 +4,15 @@
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-}
+  
+} 
+
 
 .payment-form h1 {
   text-align: center;
   font-size: 40px;
   margin-bottom: 40px;
+  color: rgb(227, 82, 82);
 }
 
 .payment-form label {
@@ -23,7 +26,7 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid  rgb(227, 82, 82);
   border-radius: 4px;
   resize: vertical;
 }
@@ -39,10 +42,11 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  transition: .5s;
 }
 
 .payment-form button:hover {
-  background-color: #0056b3;
+  background-color: rgb(227, 82, 82);
 }
 
 .loading-container {
@@ -52,8 +56,10 @@
 }
 
 .loader {
-  width: 40%;
-  height: 40%;
+  width: 10%;
+  height: 10%;
+  
+  
   
 }
 

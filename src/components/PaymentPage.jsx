@@ -37,7 +37,7 @@ const PaymentPage = () => {
       setCvv('');
       setName('');
       setAddress('');
-    }, 2500);
+    }, 2000);
   };
 
   return (
@@ -46,7 +46,7 @@ const PaymentPage = () => {
       {isLoading ? (
         <div className="loading-container">
           <img
-            src="https://media.giphy.com/media/3o7bu8sRnYpTOG1p8k/giphy.gif"
+            src="https://www.pizzahut.co.in/order/images/icons/delivery-bike-64x64.b0edef40e987a25aebdd591709d43db7.gif"
             alt="Loading..."
             className="loader"
           />

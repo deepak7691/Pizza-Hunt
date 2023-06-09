@@ -32,7 +32,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2023 Pizza Delivery. All rights reserved. </p>
+          <p>&copy; 2023 Deepak Kawliya. All rights reserved. </p>
           <p> <FaFacebook className='icon'/><FaInstagram className='icon'/><FaTwitter className='icon'/></p>
         </div>
       </div>
