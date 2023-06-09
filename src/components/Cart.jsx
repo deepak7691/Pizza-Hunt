@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
+
 import './Cart.css';
 
 const Cart = () => {
@@ -46,7 +48,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h2>Cart</h2>
+      <h1>Your Pizzas <FaShoppingCart/></h1>
       {cartItems.length === 0 ? (
         <p>No items in the cart</p>
       ) : (
