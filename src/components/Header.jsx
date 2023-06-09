@@ -30,7 +30,7 @@ const Header = (props) => {
       <nav className="header__nav">
         <ul className="header__menu">
           <li className="header__menu-item">
-            <input  type='text' placeholder="Search Pizza" value={props.searchText} onChange={(e) => props.setSearchText(e.target.value)} />
+            <input className='inputf' type='text' placeholder="Search Pizza" value={props.searchText} onChange={(e) => props.setSearchText(e.target.value)} />
           </li>
           <li className="header__menu-item" onClick={scrollToFooter}>
             About

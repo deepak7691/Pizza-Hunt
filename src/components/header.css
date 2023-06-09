@@ -39,7 +39,7 @@
   color: #00FFFF;
 }
 
-input {
+.inputf {
   border: none;
   outline: none;
   width: 200px;
@@ -72,8 +72,9 @@ input {
     font-size: 20px;
   }
 
-  input {
-    width: 200px;
+  .inputf {
+    width: 100px;
+    padding: 5px;
   }
 
   .cart-icon {
