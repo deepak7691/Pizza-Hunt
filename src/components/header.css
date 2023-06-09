@@ -44,6 +44,19 @@ input{
   font-size: 14px;
 }
 
+.cart-icon {
+  font-size: 40px; 
+  color: #fff; 
+  transition: .5s;
+  
+}
+.cart-icon:hover {
+  font-size: 40px; 
+  color: #fff; 
+  background-color: red;
+  
+}
+
 @media (max-width: 768px) {
  
   .header {

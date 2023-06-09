@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import { useNavigate } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Header = (props) => {
   const {cartItems} = props;
@@ -32,7 +33,7 @@ const Header = (props) => {
             About
           </li>
           <li className="header__menu-item" onClick={navigateContact}>Contact</li>
-          <li className="header__menu-item" onClick={navigateCart}>Cart</li>
+          <li className="header__menu-item" onClick={navigateCart}><FaShoppingCart className="cart-icon"/></li>
 
         </ul>
       </nav>

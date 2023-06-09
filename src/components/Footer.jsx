@@ -1,5 +1,11 @@
 import React from 'react';
 import "./Footer.css"
+import { FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+
+import { FaTwitter } from 'react-icons/fa';
+
+
 
 function Footer() {
   return (
@@ -26,7 +32,8 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2023 Pizza Delivery. All rights reserved.</p>
+          <p>&copy; 2023 Pizza Delivery. All rights reserved. </p>
+          <p> <FaFacebook className='icon'/><FaInstagram className='icon'/><FaTwitter className='icon'/></p>
         </div>
       </div>
     </footer>
