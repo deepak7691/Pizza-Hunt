@@ -3,7 +3,7 @@ import '../App.css';
 
 import { pizzas } from '../data';
 import Header from './Header';
-import { FaShoppingCart } from 'react-icons/fa';
+
 import { Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
