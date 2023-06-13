@@ -3,6 +3,9 @@ import '../App.css';
 
 import { pizzas } from '../data';
 import Header from './Header';
+import { FaShoppingCart } from 'react-icons/fa';
+import { Button } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 function Home() {
@@ -76,9 +79,11 @@ function Home() {
             <h1>{selectedPizza.name}</h1>
             <p>{selectedPizza.description}</p>
             <h4>₹ {selectedPizza.price}</h4>
-            <button className="add-to-cart-btn" onClick={handleAddToCart}>
-              Add to Cart
-            </button>
+             
+              <Button className="add-to-cart-btn"   onClick={handleAddToCart} variant="contained" endIcon={<ShoppingCartIcon  />}>
+                Add To Cart
+              </Button>
+            
           </div>
         </div>
       )}

@@ -66,7 +66,7 @@ const PaymentPage = () => {
           <div>
             <label htmlFor="expiryDate">Expiry Date:</label>
             <input
-              type="text"
+              type="date"
               id="expiryDate"
               value={expiryDate}
               onChange={(e) => setExpiryDate(e.target.value)}
