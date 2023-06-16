@@ -4,80 +4,112 @@
   align-items: center;
   background-color: #333;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Set your desired background color */
+  z-index: 999;
+}
+
+/* header.css */
+
+
+.header {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Set your desired background color */
+  z-index: 999;
 }
 
 .logo {
-  width: 7%;
-  height: 3%;
+  width: 100px;
+  height: auto;
   border-radius: 50%;
-  margin-left: 7%;
+  margin-left: 20px;
 }
 
+
 .header__nav {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .header__menu {
+  list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  list-style: none;
-  margin-right: 20px;
-  padding: 0;
+  margin-left: 20px;
+
 }
 
 .header__menu-item {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0 30px;
+  margin: 0 50px;
   cursor: pointer;
-  transition: .5s;
-}
-
-.header__menu-item:hover {
-  color: #00FFFF;
 }
 
 .inputf {
+  padding: 8px;
   border: none;
-  outline: none;
-  width: 200px;
-  padding: 5px;
-  font-size: 14px;
+  border-radius: 5px;
 }
 
-.cart-icon {
-  font-size: 60px;
+.abc {
   color: white;
+  font-size: 20px;
   transition: .5s;
 }
 
-.cart-icon:hover {
-  color: #FF00FF;
+.abc:hover {
+  color: rgb(13, 209, 13);
+  font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 10%;
-    
+.cart-icon {
+  font-size: 48px;
+  margin-right: 30px;
+  transition: .4s;
+  color: white;
+}
+
+.cart-icon:hover {
+  color: rgb(52, 219, 22);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
   }
-  
+
   .header__menu {
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: 10px;
   }
 
   .header__menu-item {
-    margin: 0 15px;
-    font-size: 20px;
-  }
 
+    margin: 0 8px;
+    font-size: 15px;
+
+
+  }
   .inputf {
-    width: 100px;
-    padding: 5px;
+    width: 110px;
   }
-
-  .cart-icon {
-    font-size: 35px;
+  .header{
+    width: 100%;
+  }
+  .logo {
+    width: 60px;
+   
   }
 }

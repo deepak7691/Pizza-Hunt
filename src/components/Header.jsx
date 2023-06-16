@@ -32,10 +32,10 @@ const Header = (props) => {
           <li className="header__menu-item">
             <input className='inputf' type='text' placeholder="Search Pizza" value={props.searchText} onChange={(e) => props.setSearchText(e.target.value)} />
           </li>
-          <li className="header__menu-item" onClick={scrollToFooter}>
+          <li className="header__menu-item abc" onClick={scrollToFooter}>
             About
           </li>
-          <li className="header__menu-item" onClick={navigateContact}>ContactUs</li>
+          <li className="header__menu-item abc" onClick={navigateContact}>ContactUs</li>
           <li className="header__menu-item" onClick={navigateCart}><FaShoppingCart className="cart-icon"/></li>
 
         </ul>
