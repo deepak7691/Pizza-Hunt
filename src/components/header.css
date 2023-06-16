@@ -97,19 +97,25 @@
 
   .header__menu-item {
 
-    margin: 0 8px;
-    font-size: 15px;
+    margin: 0 5px;
+    font-size: 10px;
 
 
   }
   .inputf {
-    width: 110px;
+  padding: unset;
   }
-  .header{
-    width: 100%;
-  }
+ 
   .logo {
-    width: 60px;
+    width: 40px;
+    margin: 0 5px;
+    font-size: medium;
+  
    
   }
+  .cart-icon {
+    font-size: 20px;
+    
+  }
+  
 }
