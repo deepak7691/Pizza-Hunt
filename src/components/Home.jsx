@@ -14,6 +14,7 @@ function Home() {
   const [searchText, setSearchText] = useState('');
   const [filteredPizza, setFilteredPizza] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [counter, setCounter] = useState(0);
 
 
   useEffect(() => {
@@ -46,13 +47,16 @@ function Home() {
 
   const handleAddToCart = () => {
     setCartItems((prevItems) => [...prevItems, selectedPizza]);
+    setCounter((prev) => prev + 1)
     handleCloseModal();
   };
+
+console.log("counterValue", counter)
 
 
   return (
     <>
-      <Header searchText={searchText} setSearchText={setSearchText} cartItems={cartItems} />
+      <Header searchText={searchText} setSearchText={setSearchText} cartItems={cartItems} counter={counter} setCounter={setCounter}/>
       <div className="flexbox">
         {filteredPizza.map((item) => (
           <div
