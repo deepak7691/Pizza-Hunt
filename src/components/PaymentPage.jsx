@@ -37,7 +37,7 @@ const PaymentPage = () => {
       setCvv('');
       setName('');
       setAddress('');
-    }, 2000);
+    }, 4000);
   };
 
   return (
