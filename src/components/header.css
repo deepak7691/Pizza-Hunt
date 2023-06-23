@@ -40,6 +40,7 @@
   padding: 8px;
   border: none;
   border-radius: 5px;
+  width: 100%;
 }
 
 .abc {
@@ -67,19 +68,18 @@
 .cart-counter {
   position: absolute;
   top: -8px;
-  right: -8px;
-  background-color: #ff5722;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 6px;
+  right: 2px;
+  background-color: #007bff;
+  color: #f2f3ef;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 3px 5px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
-  z-index: 1;
 }
 
 /* Mobile Styles */
@@ -114,9 +114,9 @@
   
   .cart-counter {
     top: -6px;
-    right: -6px;
-    font-size: 10px;
-    width: 12px;
+    right: 18px;
+    font-size: 12px;
+    width: 1px;
     height: 12px;
   }
 }
