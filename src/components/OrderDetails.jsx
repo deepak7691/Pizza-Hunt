@@ -1,6 +1,10 @@
 import React from 'react';
 import { useLocation, useNavigate, } from 'react-router-dom';
+import PrintIcon from '@mui/icons-material/Print';
+import { Button } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
 import "../styles/OrderDetails.css"
+
 
 const OrderDetails = () => {
   const location = useLocation();
@@ -42,8 +46,8 @@ const OrderDetails = () => {
         <strong>Total Amount:</strong> ₹ {totalAmount}
       </p>
       <div>
-        <button onClick={handlePrintReceipt}>Print Receipt</button>
-        <button onClick={handleGoHome}>Go to Home</button>
+        <Button onClick={handlePrintReceipt}  variant="contained" endIcon={<PrintIcon/>}>Print Receipt</Button>
+        <Button onClick={handleGoHome} variant="contained" endIcon={<HomeIcon/>}>Go to Home</Button>
       </div>
     </div>
   );

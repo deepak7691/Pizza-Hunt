@@ -32,7 +32,7 @@
   margin-bottom: 5px;
 }
 
-.order-details button {
+/* .order-details button {
   padding: 10px;
   margin-right: 10px;
   border: none;
@@ -43,17 +43,25 @@
   font-weight: bold;
   cursor: pointer;
   transition: .3s;
-}
+} */
 
-.order-details button:hover {
+/* .order-details button:hover {
  
   background-color: green;
 
+} */
+
+.order-details button {
+  margin: 0 5px;
 }
 
 @media screen and (max-width: 768px) {
   .order-details {
     max-width: 100%;
     padding: 10px;
+  }
+
+  .order-details button {
+    margin: 5px 0;
   }
 }

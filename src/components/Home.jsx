@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 
 import { pizzas } from '../data';
-import Header from './Header';
+import Header1 from './Header';
 
 import { Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -56,7 +56,7 @@ console.log("counterValue", counter)
 
   return (
     <>
-      <Header searchText={searchText} setSearchText={setSearchText} cartItems={cartItems} counter={counter} setCounter={setCounter}/>
+      <Header1 searchText={searchText} setSearchText={setSearchText} cartItems={cartItems} counter={counter} />
       <div className="flexbox">
         {filteredPizza.map((item) => (
           <div
@@ -65,9 +65,9 @@ console.log("counterValue", counter)
             onClick={() => handleCardClick(item)}
           >
             <img src={item.src} alt="pizza" className="card-img" />
-            <h1>{item.name}</h1>
-            <p>{item.description}</p>
-            <h4>₹ {item.price}</h4>
+            <h1  className='details'  >{item.name}</h1>
+            <p className='details' >{item.description}</p>
+            <h4  className='details' >₹ {item.price}</h4>
           </div>
         ))}
       </div>

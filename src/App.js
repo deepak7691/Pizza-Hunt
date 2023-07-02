@@ -2,10 +2,6 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
 import OrderDetails from './components/OrderDetails'
-
-
-
-
 import Footer from './components/Footer'
 import ContactUs from './components/ContactUs'
 import Cart from './components/Cart'

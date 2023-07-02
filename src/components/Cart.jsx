@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 import './Cart.css';
 
@@ -46,6 +49,10 @@ const Cart = () => {
     });
   };
 
+  const clearCart = () =>{
+    setCartItems([]);
+  }
+
   return (
     <div className="cart">
       <h1>Your Pizzas    <FaShoppingCart/></h1>
@@ -80,9 +87,10 @@ const Cart = () => {
             ))}
           </ul>
         <h3>  <p className="grand-total">Grand Total: ₹ {calculateTotal()}</p></h3>
-          <button className="proceed-btn" onClick={navigateToPayment}>
+          <Button className="proceed-btn" endIcon={<AccountBalanceWalletIcon/>} variant="contained" onClick={navigateToPayment}>
             Proceed to Payment
-          </button>
+          </Button>
+          <div>{cartItems.length && <Button className="proceed-btn" variant="contained" endIcon={<DeleteIcon/>} onClick={clearCart}>Clear Cart</Button>}</div>
         </>
       )}
     </div>
