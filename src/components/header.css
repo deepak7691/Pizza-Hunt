@@ -9,13 +9,15 @@
   left: 0;
   width: 100%;
   z-index: 999;
+  height: 70px;
 }
 
+
 .logo {
-  width: 100px;
-  height: auto;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  margin-left: 20px;
+  margin-left: 100px;
 }
 
 .header__nav {
@@ -51,7 +53,6 @@
 
 .abc:hover {
   color: #ffd700;
-  
 }
 
 .cart-icon {
@@ -83,7 +84,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .header {
     padding: 10px;
   }
@@ -103,15 +104,16 @@
   }
 
   .logo {
-    width: 40px;
-    margin: 0 5px;
+    width: 72px;
+    height: 60px;
+    margin: 0 20px;
     font-size: medium;
   }
 
   .cart-icon {
     font-size: 20px;
   }
-  
+
   .cart-counter {
     top: -6px;
     right: 18px;
@@ -120,4 +122,8 @@
     height: 12px;
     font-weight: 400;
   }
+  .sort{
+    padding-top: 72px;
+  }
+
 }

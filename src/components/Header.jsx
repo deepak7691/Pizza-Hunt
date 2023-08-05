@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './header.css';
 import { useNavigate } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
+import { Mycontext } from '../App';
 
 const Header = (props) => {
   const { cartItems, counter } = props;
   const navigate = useNavigate();
+  const {login} = useContext(Mycontext)
 
   const navigateContact = () => {
-    navigate('/contact-us');
+    navigate('/login');
   };
 
   const scrollToFooter = () => {
@@ -42,8 +44,8 @@ const Header = (props) => {
           <li className="header__menu-item abc" onClick={scrollToFooter}>
             About
           </li>
-          <li className="header__menu-item abc" onClick={navigateContact}>
-            ContactUs
+          <li className="header__menu-item abc" onClick={navigateContact}>{login ? "Logout" : "Login"}
+          
           </li>
           <li className="header__menu-item" onClick={navigateCart}>
             <FaShoppingCart className="cart-icon" />

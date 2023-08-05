@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa';
+// import { FaShoppingCart } from 'react-icons/fa';
 import { Button } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
+
 import './Cart.css';
 
 const Cart = () => {
+  
   const navigate = useNavigate();
   const location = useLocation();
   const { cartItems: initialCartItems } = location.state;
@@ -55,7 +57,14 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <h1>Your Pizzas    <FaShoppingCart/></h1>
+       <div className="namelogo">
+        <img
+          className="logod"
+          src="https://www.pizzahut.co.in/order/images/logos/logo_wide@x2.38f9109e24d22d58d048837b27f54390.png"
+          alt="abc"
+        />
+      </div>
+      {/* <h1>Your Pizzas    <FaShoppingCart/></h1> */}
       {cartItems.length === 0 ? (
         <p>No items in the cart</p>
       ) : (

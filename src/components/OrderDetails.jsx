@@ -20,8 +20,16 @@ const OrderDetails = () => {
   };
 
   return (
+    <>
+     <div className="namelogo">
+        <img
+          className="logod"
+          src="https://www.pizzahut.co.in/order/images/logos/logo_wide@x2.38f9109e24d22d58d048837b27f54390.png"
+          alt="abc"
+        />
+      </div>
     <div className="order-details">
-      <h1>Congratulations </h1>
+      <h1 className='logintext'>Congratulations </h1>
       <h5>
         {message}
       </h5>
@@ -45,11 +53,12 @@ const OrderDetails = () => {
       <p>
         <strong>Total Amount:</strong> ₹ {totalAmount}
       </p>
-      <div>
+      <div className='flexbtn'>
         <Button onClick={handlePrintReceipt}  variant="contained" endIcon={<PrintIcon/>}>Print Receipt</Button>
         <Button onClick={handleGoHome} variant="contained" endIcon={<HomeIcon/>}>Go to Home</Button>
       </div>
     </div>
+    </>
   );
 };
 
